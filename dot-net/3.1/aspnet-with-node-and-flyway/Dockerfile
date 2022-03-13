@@ -1,5 +1,5 @@
-ARG BASE_IMAGE=sonalsatpute/aspnet-with-node
-ARG VERSION=3.1-14.19-alpine3.15
+ARG BASE_IMAGE=sonalsatpute/aspnet
+ARG VERSION=node14.19-alpine3.15
 
 FROM ${BASE_IMAGE}:${VERSION} AS base
 

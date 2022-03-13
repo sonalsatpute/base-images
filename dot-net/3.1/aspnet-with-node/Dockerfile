@@ -5,8 +5,6 @@ FROM ${BASE_IMAGE}:${VERSION} AS base
 
 ENV NODE_VERSION 14.19.0
 
-RUN apk --no-cache add curl
-
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
     && apk add --no-cache \
