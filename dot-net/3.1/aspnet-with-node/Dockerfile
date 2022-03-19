@@ -5,6 +5,12 @@ FROM ${BASE_IMAGE}:${VERSION} AS base
 
 ENV NODE_VERSION 14.19.0
 
+LABEL maintainer="sonal satpute"
+LABEL org.label-schema.schema-version="1.0"
+LABEL org.label-schema.description="dotnet aspnet with node ${NODE_VERSION} image based on ${BASE_IMAGE}:${VERSION}"
+LABEL org.label-schema.url="https://sonalsatpute.github.io"
+LABEL org.label-schema.vcs-url="https://github.com/sonalsatpute/base-images/dot-net/3.1/aspnet-with-node"
+
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
     && apk add --no-cache \

@@ -5,6 +5,12 @@ FROM ${BASE_IMAGE}:${VERSION} AS base
 
 ENV FLYWAY_VERSION 8.5.2
 
+LABEL maintainer="sonal satpute"
+LABEL org.label-schema.schema-version="1.0"
+LABEL org.label-schema.description="dotnet aspnet with node ${NODE_VERSION} image based on ${BASE_IMAGE}:${VERSION}"
+LABEL org.label-schema.url="https://sonalsatpute.github.io"
+LABEL org.label-schema.vcs-url="https://github.com/sonalsatpute/base-images/dot-net/3.1/aspnet-with-node-and-flyway"
+
 WORKDIR /flyway
 
 RUN apk add --no-cache --virtual .build-deps curl \
